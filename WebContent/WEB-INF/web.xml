@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<web-app xmlns="http://java.sun.com/xml/ns/j2ee"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd"
+    version="2.4">
+
+    <display-name>TC Application</display-name>
+    <description>
+	TC servlets
+    </description>
+
+    <servlet>
+        <servlet-name>SessionServlet</servlet-name>
+        <servlet-class>web.servlets.SessionServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>SessionServlet</servlet-name>
+        <url-pattern>/session</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>CookieServlet</servlet-name>
+        <servlet-class>web.servlets.CookieServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>CookieServlet</servlet-name>
+        <url-pattern>/cookie</url-pattern>
+    </servlet-mapping>
+    
+    
+    <servlet>
+        <servlet-name>RequestParamServlet</servlet-name>
+        <servlet-class>web.servlets.RequestParamServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>RequestParamServlet</servlet-name>
+        <url-pattern>/params</url-pattern>
+    </servlet-mapping>
+    
+    
+    <servlet>
+        <servlet-name>RequestInfoServlet</servlet-name>
+        <servlet-class>web.servlets.RequestInfoServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>RequestInfoServlet</servlet-name>
+        <url-pattern>/info</url-pattern>
+    </servlet-mapping>
+    
+    
+     <servlet>
+        <servlet-name>numGuess</servlet-name>
+         <jsp-file>/numguess.jsp</jsp-file>
+    </servlet>
+    
+     <servlet-mapping>
+        <servlet-name>numGuess</servlet-name>
+        <url-pattern>/guess</url-pattern>
+    </servlet-mapping>
+    
+     
+     <servlet>
+        <servlet-name>MongoDBServlet</servlet-name>
+        <servlet-class>web.servlets.MongoDBClient</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>MongoDBServlet</servlet-name>
+        <url-pattern>/mongo</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>RedisServlet</servlet-name>
+        <servlet-class>web.servlets.RedisClientServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>RedisServlet</servlet-name>
+        <url-pattern>/redis</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>TesterServlet</servlet-name>
+        <servlet-class>web.servlets.Tester</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>TesterServlet</servlet-name>
+        <url-pattern>/tester</url-pattern>
+    </servlet-mapping>
+
+</web-app>
